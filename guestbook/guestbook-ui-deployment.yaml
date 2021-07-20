@@ -14,7 +14,9 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: gordes317/guestbook-demo:0.2
+      - image: harborsh.madserving.com/test/guestbook-demo:0.2
         name: guestbook-ui
         ports:
-        - containerPort: 90
+        - containerPort: 80
+      imagePullSecrets:
+        - name: harbor-secret
